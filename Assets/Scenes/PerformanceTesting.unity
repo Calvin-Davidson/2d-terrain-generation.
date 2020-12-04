@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 322303220}
   - component: {fileID: 322303221}
   - component: {fileID: 322303222}
+  - component: {fileID: 322303223}
   m_Layer: 0
   m_Name: TestObj
   m_TagString: Untagged
@@ -180,9 +181,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022f3d622df78cb4babdf4020b2b0edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 50
-  width: 200
+  height: 100
+  width: 100
   spawnWhen: 0.35
+  seed: 345345
+  heightMultiplier: 0
+  heightAddition: 0
+  smoothness: 0
+--- !u!114 &322303223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322303219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119465af022f90f42bf951393202485b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823690969
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823690969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 84, y: 56, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
