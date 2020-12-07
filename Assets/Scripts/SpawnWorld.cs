@@ -1,7 +1,5 @@
 ﻿using System;
-using TreeEditor;
 using UnityEngine;
-using UnityEngine.WSA;
 using Random = UnityEngine.Random;
 
 public class SpawnWorld : MonoBehaviour

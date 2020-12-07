@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 100
-  width: 100
+  width: 500
   spawnWhen: 0.35
   seed: 345345
   heightMultiplier: 0
@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 823690971}
   - component: {fileID: 823690970}
   - component: {fileID: 823690973}
+  - component: {fileID: 823690974}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,3 +299,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showChunksX: 2
   showChunksY: 1
+--- !u!114 &823690974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823690969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37687f0ec9835f458fca80daa51d21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
