@@ -132,9 +132,8 @@ GameObject:
   - component: {fileID: 322303220}
   - component: {fileID: 322303221}
   - component: {fileID: 322303222}
-  - component: {fileID: 322303223}
   m_Layer: 0
-  m_Name: TestObj
+  m_Name: generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,18 +187,6 @@ MonoBehaviour:
   heightMultiplier: 0
   heightAddition: 0
   smoothness: 0
---- !u!114 &322303223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322303219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119465af022f90f42bf951393202485b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &823690969
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +200,7 @@ GameObject:
   - component: {fileID: 823690970}
   - component: {fileID: 823690973}
   - component: {fileID: 823690974}
+  - component: {fileID: 823690975}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -312,3 +300,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  cameraMoveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 823690973}
+        m_MethodName: UpdateChunks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &823690975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823690969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c530bca49023954a82c559edc1fb28d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

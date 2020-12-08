@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SimpleCameraMovement : MonoBehaviour
 {
 
     public float speed;
-
-    // Update is called once per frame
+    [SerializeField] private UnityEvent cameraMoveEvent = new UnityEvent();
+   
     void Update()
     {
-        Vector3 dir = new Vector3();
+        Vector3 dir = Vector3.zero;
 
         dir.x = Input.GetAxis("Horizontal");
         dir.y = Input.GetAxis("Vertical");
 
         transform.position += dir * (Time.deltaTime * speed);
+        
+        cameraMoveEvent.Invoke();
     }
 }
