@@ -40,6 +40,11 @@ public class Chunk
         set => _chunkObject = value;
     }
 
+    public string GetName()
+    {
+        return _chunkX + ":" + _chunkY;
+    }
+
     public void SpawnChunkTiles()
     {
         for (int y = 0; y < 16; y++)
@@ -57,7 +62,6 @@ public class Chunk
                         Object.Instantiate(ChunkManager.Grass, new Vector2(_chunkX * 16 + x, _chunkY * 16 + y), Quaternion.identity).transform.SetParent(_chunkObject.transform);;
                         break;
                     case 4: // dirt
-                        Debug.Log("dirt");
                         Object.Instantiate(ChunkManager.Dirt, new Vector2(_chunkX * 16 + x, _chunkY * 16 + y), Quaternion.identity).transform.SetParent(_chunkObject.transform);;
                         break;
                     case 5: // unknown

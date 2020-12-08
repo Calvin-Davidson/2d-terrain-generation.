@@ -16,20 +16,15 @@ public class SpawnWorld : MonoBehaviour
     private void Awake()
     {
         if (seed == 0) seed = GeneratedSeed();
-    }
-
-
-    private void Start()
-    {
         CreateSurface();
         CreateCaves();
 
-        foreach (var chunk in ChunkManager.GetChunks())
+        foreach (var keyValuePair in ChunkManager.GetChunks())
         {
-            chunk.SpawnChunkTiles();
+            keyValuePair.Value.SpawnChunkTiles();
         }
     }
-
+    
     public float GetPerlinValue(float x, float y)
     {
         return Mathf.PerlinNoise(x + seed, y + seed);
@@ -48,8 +43,9 @@ public class SpawnWorld : MonoBehaviour
 
     private void CreateCaves()
     {
-        foreach (var chunk in ChunkManager.GetChunks())
+        foreach (var keyValuePair in ChunkManager.GetChunks())
         {
+            Chunk chunk = keyValuePair.Value;
             for (int y = 0; y < 16; y++)
             {
                 for (int x = 0; x < 16; x++)
@@ -122,7 +118,7 @@ public class SpawnWorld : MonoBehaviour
                     }
                 }
 
-                ChunkManager.GetChunks().Add(chunk);
+                ChunkManager.GetChunks().Add(chunkX + ":" + chunkY, chunk);
             }
         }
     }

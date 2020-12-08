@@ -9,7 +9,8 @@ using Object = System.Object;
 
 public class ChunkManager : MonoBehaviour
 {
-    private static readonly List<Chunk> Chunks = new List<Chunk>();
+    //private static readonly List<Chunk> Chunks = new List<Chunk>();
+    private static Dictionary<String, Chunk> Chunks = new Dictionary<string, Chunk>();
     private static string _saveFolderPath;
     
     [SerializeField] private GameObject dirt;
@@ -27,7 +28,7 @@ public class ChunkManager : MonoBehaviour
         Stone = stone;
     }
     
-    public static List<Chunk> GetChunks()
+    public static Dictionary<String, Chunk> GetChunks()
     {
         return Chunks;
     }
